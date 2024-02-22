@@ -1,19 +1,8 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import both from './both';
-import yes from './yes';
+import 'react-native-gesture-handler';
+import Navigation from './Navigation';
 
-const Stack = createStackNavigator();
-const App = () => {
-    return (
-        <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen name="both" component={both}></Stack.Screen>
-              <Stack.Screen name="yes" component={yes}></Stack.Screen>
-            </Stack.Navigator>
-        </NavigationContainer>
-    );
-}; 
 
-export default App;
+export default function App() {
+    return <Navigation></Navigation>;
+}

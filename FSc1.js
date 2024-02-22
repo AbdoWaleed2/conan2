@@ -7,13 +7,13 @@ import React, {useState} from 'react';
 import { styles } from './styles';
 //import { useState } from 'react';
 
-const both = ({navigation}) => {
+const FSc1 = ({navigation}) => {
 
   const [position,setPosition] = useState ({x:0 , y:0});
 
     const handleprees = () => {
 
-      setPosition({x:Math.random()*200, y:Math.random()*200});
+      setPosition({x:Math.random()*150, y:Math.random()*150});
 
 
     };
@@ -27,10 +27,10 @@ const both = ({navigation}) => {
 
 
     <View style={styles.container}>
-      <Text style={styles.tt}>i'll go with u to the doctor tomorrow k?</Text>
+      <Text style={styles.tt}>i'll go with u to the doctor k?</Text>
       <Image source={IM} style={styles.mm}></Image>
 <View style={styles.as}>
-      <TouchableOpacity onPress={() => navigation.navigate('yes')} style={styles.bby}>
+      <TouchableOpacity onPress={() => navigation.navigate('FSc2')} style={styles.bby}>
       <Text>YES</Text>
       </TouchableOpacity >
      <TouchableOpacity onPress={handleprees} style={[styles.bbn ,{left: position.x , top: position.y}]}>
@@ -45,5 +45,4 @@ const both = ({navigation}) => {
   );
 
 };
-export default  both;
-
+export default  FSc1;
